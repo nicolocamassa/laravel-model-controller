@@ -16,3 +16,4 @@ use App\Http\Controllers\MovieController as MovieController;
 */
 
 Route::get('/', [MovieController::class, 'index']);
+Route::get('/{id}', [MovieController::class, 'infoShow'])->name('info');

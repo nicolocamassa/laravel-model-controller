@@ -9,16 +9,14 @@
                 <div class="row">
                     <div class="row">
 
-                        @foreach ($movies as $movie)
                             <div class="card m-3" style="width: 18rem;">
-                                <div class="card-body">
                                     <h5 class="card-title">{{ $movie->title }} </h5>
                                     <h6 class="card-subtitle mb-2 text-body-secondary">Id: {{ $movie->id }}</h6>
                                     <p class="card-text">Titolo originale: {{ $movie->original_title }}</p>
-                                    <a href="{{ route('info', ['id' => $movie->id])}}" class="card-link">Vedi dettagli</a>
-                                </div>
+                                   <p>{{ $movie->nationality }}</p>
+                                   <p>{{ $movie->date }}</p>
+                                   <p>{{ $movie->vote }}</p>
                             </div>
-                        @endforeach
 
                     </div>
                 </div>

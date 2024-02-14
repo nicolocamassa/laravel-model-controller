@@ -12,4 +12,11 @@ class MovieController extends Controller
 
 		return view('mainPage', compact('movies'));
 	}
+
+    public function infoShow($id){
+        $movies = Movie::all();
+        $movie = $movies->find($id);
+
+        return view('infoShow', compact('movie'));
+    }
 }
